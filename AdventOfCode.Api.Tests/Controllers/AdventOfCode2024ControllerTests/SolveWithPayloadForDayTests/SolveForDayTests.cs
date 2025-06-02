@@ -17,7 +17,7 @@ public class SolveForDayTests
         //var result = await CreateBaseResponse(traceableOutput);
         //return Ok(result);
 
-        Assert.Equal(1, 1); // Placeholder assertion for the test to compile and run
+        Assert.Equal(2, 2); // Placeholder assertion for the test to compile and run
 
     }
 }
