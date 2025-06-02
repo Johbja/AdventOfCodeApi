@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdventOfCode.Application.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,8 +25,10 @@ public class Year2024Day01PartTwoSubOperation
         var idLists = input.Lines
             .Select(line => line
                 .Split(" ", StringSplitOptions.RemoveEmptyEntries)
+                .Where(x => x.HasValue())
                 .Select(id => int.Parse(id))
                 .ToArray())
+            .Where(values => values.Length >= 2)
             .Aggregate(
                 new 
                 { 
