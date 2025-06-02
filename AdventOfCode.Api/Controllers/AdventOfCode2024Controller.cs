@@ -1,4 +1,5 @@
-﻿using AdventOfCode.Application.Operations;
+﻿using AdventOfCode.Api.Attributes;
+using AdventOfCode.Application.Operations;
 using AdventOfCode.Application.Operations.Interfaces;
 using AdventOfCode.Application.Operations.Years;
 using Microsoft.AspNetCore.Mvc;
@@ -7,6 +8,7 @@ namespace AdventOfCode.Api.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+[ControllerName("Advent of code 2024")]
 public class AdventOfCode2024Controller(IApplicationOperationResolver operationResolver) 
     : ApiController(operationResolver)
 {

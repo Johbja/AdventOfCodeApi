@@ -16,7 +16,9 @@ public class Program
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen(c =>
         {
-            c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Advent Of Code Api", Version = "v1" });
+            c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Advent Of Code Api", Version = "v1"});
+            c.CustomSchemaIds(type => type.Name);
+            c.OperationFilter<SwaggerControllerNameTagFilter>();
         });
 
         var app = builder.Build();
