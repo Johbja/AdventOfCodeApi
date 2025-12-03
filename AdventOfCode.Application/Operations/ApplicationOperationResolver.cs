@@ -7,9 +7,6 @@ public class ApplicationOperationResolver(
     IServiceProvider serviceProvider)
     : IApplicationOperationResolver
 {
-    private readonly IApplicationOperationManager _operationManager = operationManager;
-    private readonly IServiceProvider _serviceProvider = serviceProvider;
-
     TOperation IApplicationOperationResolver.ResolveOperation<TOperation>()
     {
         var operation = CreateOperation(typeof(TOperation));
@@ -19,11 +16,11 @@ public class ApplicationOperationResolver(
     private IApplicationOperation CreateOperation(Type operation)
     {
         //TODO: add transaction scope in future if needed
-        var operationInstance = _serviceProvider.GetService(operation) as IApplicationOperation;
+        var operationInstance = serviceProvider.GetService(operation) as IApplicationOperation;
 
         if(operationInstance == null)
         {
-            throw new NullReferenceException($"Operation of type {operation.FullName} was not found in {_serviceProvider.GetType().FullName}");
+            throw new NullReferenceException($"Operation of type {operation.FullName} was not found in {serviceProvider.GetType().FullName}");
         }
 
         InitializeOperation(operationInstance);
@@ -33,7 +30,7 @@ public class ApplicationOperationResolver(
     private void InitializeOperation(IApplicationOperation operation)
     {
         operation.Initialize(
-            _operationManager,
+            operationManager,
             this);
     }
 }

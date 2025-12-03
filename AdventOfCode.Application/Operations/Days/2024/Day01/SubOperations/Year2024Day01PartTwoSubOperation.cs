@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdventOfCode.Application.Operations.SubOperations;
+namespace AdventOfCode.Application.Operations.Days.SubOperations;
 public class Year2024Day01PartTwoSubOperation 
     : ApplicationOperation<Year2024Day01PartTwoSubOperation.Input,
                            Year2024Day01PartTwoSubOperation.Output>

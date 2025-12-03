@@ -1,4 +1,4 @@
-﻿using AdventOfCode.Application.Operations.SubOperations;
+﻿using AdventOfCode.Application.Operations.Days.SubOperations;
 
 namespace AdventOfCode.Application.Operations.Days;
 
