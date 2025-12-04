@@ -20,8 +20,8 @@ public class Year2025Day01Operation
         var resultPartTwo = await operationPartTwo.Output;
 
         return new GenericOperationOutput(
-            $"Result for day1 part one:{Environment.NewLine} password: {resultPartOne.Password}{Environment.NewLine} operation time: {operationPartOne.TimeElapsed}",
-            $"Result for day1 part two:{Environment.NewLine} password: {resultPartTwo.Password}{Environment.NewLine} operation time: {operationPartTwo.TimeElapsed}");
+            $"Result for day 1 part one:{Environment.NewLine} password: {resultPartOne.Password}{Environment.NewLine} operation time: {operationPartOne.TimeElapsed}",
+            $"Result for day 1 part two:{Environment.NewLine} password: {resultPartTwo.Password}{Environment.NewLine} operation time: {operationPartTwo.TimeElapsed}");
     }
 }
 

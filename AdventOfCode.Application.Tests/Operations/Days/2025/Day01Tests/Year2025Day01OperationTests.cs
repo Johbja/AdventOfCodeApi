@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AdventOfCode.Application.Operations.Days.SubOperations;
+﻿using AdventOfCode.Application.Operations.Days.SubOperations;
 using AdventOfCode.Application.Tests.Fixtures;
-using Microsoft.AspNetCore.Http;
+
 
 namespace AdventOfCode.Application.Tests.Operations;
 

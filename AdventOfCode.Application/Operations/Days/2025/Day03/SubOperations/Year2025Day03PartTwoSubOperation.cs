@@ -1,5 +1,4 @@
 ﻿using AdventOfCode.Application.Attributes;
-using System.Reflection;
 
 namespace AdventOfCode.Application.Operations.Days.SubOperations;
 

@@ -41,6 +41,7 @@ public class AdventOfCode2025DaySelectionOperation
             1 => CreateSubOperation<Year2025Day01Operation>().Execute(dayInput),
             2 => CreateSubOperation<Year2025Day02Operation>().Execute(dayInput),
             3 => CreateSubOperation<Year2025Day03Operation>().Execute(dayInput),
+            4 => CreateSubOperation<Year2025Day04Operation>().Execute(dayInput),
             _ => throw new ArgumentOutOfRangeException($"The solution for day {input.Day} is not supported yet")
         };
     }

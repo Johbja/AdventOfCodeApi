@@ -25,7 +25,7 @@ public class Year2025Day03Operation
         var resultPartTwo = await operationPartTwo.Output;
 
         return new GenericOperationOutput(
-            $"Result for day2 part one:{Environment.NewLine} Jolts: {resultPartOne.JoltSum} {Environment.NewLine} operation time: {operationPartOne.TimeElapsed}",
-            $"Result for day2 part two:{Environment.NewLine} Jolts: {resultPartTwo.JoltSum} {Environment.NewLine} operation time: {operationPartTwo.TimeElapsed}");
+            $"Result for day 3 part one:{Environment.NewLine} Jolts: {resultPartOne.JoltSum} {Environment.NewLine} operation time: {operationPartOne.TimeElapsed}",
+            $"Result for day 3 part two:{Environment.NewLine} Jolts: {resultPartTwo.JoltSum} {Environment.NewLine} operation time: {operationPartTwo.TimeElapsed}");
     }
 }
