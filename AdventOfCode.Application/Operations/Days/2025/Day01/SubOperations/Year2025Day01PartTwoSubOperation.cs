@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AdventOfCode.Application.Attributes;
+using Microsoft.VisualBasic;
 
 namespace AdventOfCode.Application.Operations.Days.SubOperations;
 
@@ -17,35 +18,8 @@ public class Year2025Day01PartTwoSubOperation
     {
         public class DialInstruction(char direction, int turns)
         {
-            public Func<int, (int cycles, int newDialValue)> ExecuteRotation { get; } = (direction == 'L')
-                ? (int dialValue) =>
-                {
-                    var newDialValue = Modulo((dialValue - turns), 100);
-                    var cycles = 0;
-                    var stepsAfterZero = turns - dialValue;
-                    if (stepsAfterZero < 0)
-                        return (0, newDialValue);
-
-                    cycles = 1 + (turns) / 100;
-
-                    return (cycles, newDialValue);
-                }
-                : (int dialValue) =>
-                {
-                    var newDialValue = Modulo((dialValue + turns), 100);
-                    var cycles = (turns)/ 100;
-
-                    return (cycles, newDialValue);
-                };
-        }
-
-        private static int Modulo(int a, int n)
-        {
-            var remainder = a % n;
-            if(remainder < 0)
-                remainder += n;
-
-            return remainder;
+            public int Direction { get; } = (direction == 'L') ? -1 : 1;
+            public int TurnValue { get; } = turns;
         }
 
         public Input(string[] dialRotations)
@@ -64,7 +38,6 @@ public class Year2025Day01PartTwoSubOperation
         public int Password { get; } = password;
     }
 
-
     protected override async Task<Output> ExecuteApplicationLogic(Input input)
     {
         return await Task.Run(() =>
@@ -73,9 +46,13 @@ public class Year2025Day01PartTwoSubOperation
             var zeroCounter = 0;
             foreach (var instruction in input.DialInstructions)
             {
-                var result = instruction.ExecuteRotation(dialValue);
-                dialValue = result.newDialValue;
-                zeroCounter += result.cycles;
+                for (int i = 0; i < instruction.TurnValue; i++)
+                {
+                    dialValue += instruction.Direction;
+                    dialValue %= 100;
+                    if (dialValue == 0)
+                        zeroCounter++;
+                }
             }
 
             return new Output(zeroCounter);

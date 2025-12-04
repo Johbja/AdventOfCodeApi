@@ -39,7 +39,7 @@ public class Year2025Day01OperationTests(AdventOfCodeOperationsFixture fixture)
             .Execute(new Year2025Day01PartTwoSubOperation.Input(CreateBigInput()));
         var output = await result.Output;
 
-        Assert.Equal(6, output.Password);
+        Assert.Equal(5899, output.Password);
     }
 
     private static string[] CreateSmallSampleInput()
