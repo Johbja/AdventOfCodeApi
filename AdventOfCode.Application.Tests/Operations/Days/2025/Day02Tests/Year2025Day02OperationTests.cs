@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using AdventOfCode.Application.Operations.Days.SubOperations;
 using AdventOfCode.Application.Tests.Fixtures;
 
-namespace AdventOfCode.Application.Tests.Operations.Days;
+namespace AdventOfCode.Application.Tests.Operations;
 
 public class Year2025Day02OperationTests(AdventOfCodeOperationsFixture fixture)
     : OperationsTestHarness(fixture)
