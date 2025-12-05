@@ -1,7 +1,8 @@
-﻿using AdventOfCode.Application.Operations.Days.SubOperations;
+﻿using AdventOfCode.Application.Operations.Year2025.Days.SubOperations;
 using AdventOfCode.Application.Tests.Fixtures;
+using AdventOfCode.Application.Tests.Operations;
 
-namespace AdventOfCode.Application.Tests.Operations;
+namespace AdventOfCode.Application.Tests.Year2025.Operations;
 
 public class Year2025Day02OperationTests(AdventOfCodeOperationsFixture fixture)
     : OperationsTestHarness(fixture)

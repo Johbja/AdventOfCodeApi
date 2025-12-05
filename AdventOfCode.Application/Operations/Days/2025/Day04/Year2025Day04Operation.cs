@@ -1,6 +1,6 @@
-﻿using AdventOfCode.Application.Operations.Days.SubOperations;
+﻿using AdventOfCode.Application.Operations.Year2025.Days.SubOperations;
 
-namespace AdventOfCode.Application.Operations.Days;
+namespace AdventOfCode.Application.Operations.Year2025.Days;
 
 public class Year2025Day04Operation 
     : ApplicationOperation<

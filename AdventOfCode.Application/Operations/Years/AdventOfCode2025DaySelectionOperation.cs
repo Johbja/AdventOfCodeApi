@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AdventOfCode.Application.Operations.Days;
+﻿using AdventOfCode.Application.Operations.Year2025.Days;
 
 namespace AdventOfCode.Application.Operations.Years;
 
@@ -42,6 +37,10 @@ public class AdventOfCode2025DaySelectionOperation
             2 => CreateSubOperation<Year2025Day02Operation>().Execute(dayInput),
             3 => CreateSubOperation<Year2025Day03Operation>().Execute(dayInput),
             4 => CreateSubOperation<Year2025Day04Operation>().Execute(dayInput),
+            5 => CreateSubOperation<Year2025Day05Operation>().Execute(dayInput),
+            6 => CreateSubOperation<Year2025Day06Operation>().Execute(dayInput),
+            7 => CreateSubOperation<Year2025Day07Operation>().Execute(dayInput),
+            8 => CreateSubOperation<Year2025Day08Operation>().Execute(dayInput),
             _ => throw new ArgumentOutOfRangeException($"The solution for day {input.Day} is not supported yet")
         };
     }

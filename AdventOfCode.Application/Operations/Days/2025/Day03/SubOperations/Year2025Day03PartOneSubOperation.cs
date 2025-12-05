@@ -1,6 +1,6 @@
 ﻿using AdventOfCode.Application.Attributes;
 
-namespace AdventOfCode.Application.Operations.Days.SubOperations;
+namespace AdventOfCode.Application.Operations.Year2025.Days.SubOperations;
 
 [TestableOperation]
 public class Year2025Day03PartOneSubOperation
