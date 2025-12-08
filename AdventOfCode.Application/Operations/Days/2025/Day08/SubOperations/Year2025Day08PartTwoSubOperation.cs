@@ -18,7 +18,7 @@ public class Year2025Day08PartTwoSubOperation
 
     protected override Task<Output> ExecuteApplicationLogic(Input input)
     {
-        throw new NotImplementedException();
+        return Task.Run(() => new Output());
     }
 }
 
